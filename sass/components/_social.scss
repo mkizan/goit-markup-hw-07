@@ -1,9 +1,13 @@
 .social-pages--content-space-evenly {
-	@include box(flex, space-evenly, center);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .social-pages--content-space-between {
-	@include box(flex, space-between, center);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .social-pages__link {
