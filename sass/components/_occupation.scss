@@ -3,21 +3,21 @@
 	text-align: center;
 }
 
-.occupation-title {
+.occupation__title {
 	margin-top: 0;
 	margin-bottom: 50px;
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.16;
 	letter-spacing: 0.03em;
-	color: var(--primary-text-color);
+	color: $primary-text-color;
 }
 
-.occupation-title::first-letter {
+.occupation__title::first-letter {
 	text-transform: capitalize;
 }
 
-.occupation-list {
+.occupation__list {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 0;
@@ -26,11 +26,11 @@
 	list-style: none;
 }
 
-.occupation-list > .occupation-item {
+.occupation__list > .occupation__item {
 	position: relative;
 }
 
-.occupation-description {
+.occupation__description {
 	position: absolute;
 	bottom: 0;
 	display: block;
@@ -46,5 +46,5 @@
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	background-color: rgba(47, 48, 58, 0.8);
-	color: var(--hero-text-color);
+	color: $secondary-text-color;
 }

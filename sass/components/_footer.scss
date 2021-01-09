@@ -1,84 +1,70 @@
 .footer {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	background-color: var(--background-footer-color);
+	background-color: $footer-bg-color;
 }
 
-.footer-wrapper {
+.footer__wrapper {
 	display: flex;
 	align-items: baseline;
 }
 
-.footer-wrapper a {
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+// .footer-wrapper a {
+// 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
 /* ADDRESS - BLOCK */
-.logo-footer {
-	display: block;
-	margin-top: 0;
-	margin-bottom: 20px;
-	cursor: pointer;
-}
-
-.footer-logo {
-	font-family: Raleway, sans-serif;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.19;
-	letter-spacing: 0.03em;
-	color: var(--hero-text-color);
-}
 
 .address-block {
 	margin-right: 70px;
 }
 
-.address {
+.address-block__address {
 	margin-top: 0;
 	margin-bottom: 9px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
-	color: var(--hero-text-color);
+	color: $secondary-text-color;
 }
 
-.address-email {
+.address-block__email {
 	margin-bottom: 9px;
 }
 
-.contact-email {
+.address-block__contact-email {
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	text-decoration: none;
-	color: var(--secondary-text-color);
+	color: $description-text-color;
+
+	&:focus,
+	&:hover {
+		color: $accent-color;
+		cursor: pointer;
+	}
 }
 
-.contact-email:focus,
-.contact-email:hover {
-	color: var(--accent-text-color);
-	cursor: pointer;
-}
-
-.contact-phone {
+.address-block__contact-phone {
 	margin-top: 0;
 	margin-bottom: 0;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	text-decoration: none;
-	color: var(--secondary-text-color);
-}
+	color: $description-text-color;
 
-.contact-phone:focus,
-.contact-phone:hover {
-	color: var(--accent-text-color);
-	cursor: pointer;
+	&:focus,
+	&:hover {
+		color: $accent-color;
+		cursor: pointer;
+	}
 }
 
 /* SOCIAL - BLOCK */
@@ -90,7 +76,7 @@
 	height: 80px;
 }
 
-.join {
+.social-block__join {
 	margin-bottom: 20px;
 	font-style: normal;
 	font-weight: 700;
@@ -98,34 +84,29 @@
 	line-height: 1.14;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	color: var(--hero-text-color);
+	color: $secondary-text-color;
 }
 
-.social-list {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
+// .social-list {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// }
 
-.social-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0.1);
-	color: var(--hero-text-color);
-}
+// .social-link {
+// 	@extend %social-icons;
+// 	background-color: rgba(255, 255, 255, 0.1);
+// 	color: $secondary-text-color;
+// }
 
-.social-icon {
-	fill: currentColor;
-}
+// .social-icon {
+// 	fill: currentColor;
+// }
 
-.social-link:hover,
-.social-link:focus {
-	background-color: var(--accent-text-color);
-}
+// .social-link:hover,
+// .social-link:focus {
+// 	background-color: $accent-color;
+// }
 
 /* MAILING - BLOCK */
 
@@ -133,44 +114,44 @@
 	display: flex;
 }
 
-.mailing {
+.form-mailing {
 	display: flex;
 	flex-direction: column;
 }
 
-.form-mailing-wrapper {
+.form-mailing__wrapper {
 	display: flex;
 	flex-direction: row;
 }
 
-.mailing-label {
+.form-mailing__label {
 	margin-bottom: 20px;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	color: var(--background-main-color);
+	color: $primary-bg-color;
 }
 
-.mailing input {
+.form-mailing input {
 	width: 358px;
 	margin-right: 12px;
 	padding: 15px 16px;
 	background-color: transparent;
-	border: 1px solid var(--secondary-text-color);
+	border: 1px solid $description-text-color;
 	border-radius: 4px;
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.mailing input::placeholder {
+.form-mailing input::placeholder {
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.mailing-button {
+.form-mailing__button {
 	display: flex;
 	align-items: center;
 	padding: 10px 29px;
@@ -180,11 +161,11 @@
 	font-size: 16px;
 	line-height: 1.87;
 	letter-spacing: 0.06em;
-	background-color: var(--accent-text-color);
-	color: var(--hero-text-color);
+	background-color: $accent-color;
+	color: $secondary-text-color;
 }
 
-.mailing-button .icon {
+.form-mailing__icon {
 	margin-left: 10px;
 	fill: currentColor;
 }
